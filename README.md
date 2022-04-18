@@ -1,6 +1,6 @@
 # Process
 
-**The process template allows you to create new processes and treat them as products.**
+**The [process template](https://github.com/product-os/process-template) allows you to create new processes and treat them as products.**
 
 ## Highlights
 
