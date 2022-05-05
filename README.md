@@ -4,9 +4,11 @@
 
 ## Highlights
 
-- **Version control**: Use version control to communicate changes clearly
+- **Version control**: Use version control to track and communicate changes to the team
 - **Reviewing**: Get reviews from other team members
-- **Testing**: Define tests for changes before implementation
+- **Testing**: Make sure the process is working as expected before implementation
+- **Modularity**: Build clear interfaces for your process so other people can use it in their processes or products, or use already existing process to enable your process
+- **Automation**: Take advange of the CI tools and automations. Convert complex processes into simple transformers.
 
 ## Setup and configuration
 
