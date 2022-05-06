@@ -38,6 +38,4 @@ GitHub CI
 
 5. When the diagram is finished export a PNG file
 
-![Image 1 appears here](img1.jpg)
-
 6. Save the PNG file to the repo's output folder, name it as 'process-diagram.png'
