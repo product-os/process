@@ -17,7 +17,6 @@ input:
   - Abstract idea for a process
 output:
   - Process simplified yaml file
-instructions:
 ---
 handle: Process simplified yaml file
 type: input-output
