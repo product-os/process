@@ -28,4 +28,8 @@ GitHub CI
 ### instructions
 
 
-1. Copy the yaml file 2. Replace 'handle:' with '#' 3. ...
+1. Copy the yaml file
+
+2. Replace 'handle:' with '#'
+
+3. ...
