@@ -17,100 +17,27 @@ input:
   - Abstract idea for a process
 output:
   - Process simplified yaml file
-instructions: "1. Every step in a process has an input, which after a set of instructions (transformation) becomes an output. The output will become an input for the next step which is a new transformation.
-
-2. The first step is to define what transformations are required, what are the inputs and outputs of each transformation
-
-3. To define an input or an output you can use the 'input-output' element, here is how this code looks like:
-
-```yaml
-#Example of an input-output element. Btw this is comment.
-#You can add comments to help people understand your code.
-#Just use a # and then your comment
-handle: Name1 #You need to give this element a name
-type: input-output #This element is an input/output
-description: This is an element #A longer explanation of the element
-required:
-  - Data field 1 #what data are required as input
-  - Data field 2 #you can have multiple data required
-  - ... #just add new lines for more
-optional:
-  - Data field 1 #some data might be optional
-  - Data field 2 #you can have multiple data required
-  - ... #just add new lines for more
---- #this line is a divider between different elements
-```
-
-4. To define a transformer you can use the 'transformer' element, here is how this code looks like:
-
-```yaml
-#Example of a transformer element
-handle: Name2 #You need to give this element a name
-type: transformer #This element is a transformer
-description: This is an element #A longer explanation of the element
-actor: Name #Who is following the instructions? A person, a piece of code, a service, etc.
-access:
-  - Access field 1 #Is a particular type of access required for the actor? Access to a GitHub org for instance.
-  - Access field 2 #Access to multiple places might be required
-  - ... #just add new lines for more
-input:
-  - Name1 #The transformer requires an input-output element as input. Put the name of that element.
-  - ... #just add new lines for more
-output:
-  - Name3 #The transformer requires an input-output element as output. Put the name of that element.
-  - ... #just add new lines for more
-instructions: "" #Describe all steps required for the transformation
-```
-
-5. Instructions in a transformer are very important as they describe what exactly needs to be done during these transformation. These steps might be followed my a human being on a manual step or a machine (transformer) when a step is automated.
-
-6. You need to write all these transformation into the 'meta.yml' file, here's a simple example of a transformer that gets the details of a team member and sends them an email with a google form:
-
-```yaml
-handle: Team member details
-type: input-output
-description: Information about a balena team member
-required:
-  - team member email
-  - google form link
-optional:
-  - team member name
----
-handle: Google form
-type: input-output
-description: A google form to share with a team member
-required:
-  - Google form link
-optional:
----
-handle: Send a google form
-type: transformer
-description: Send a google form to a team member
-actor: balena operations team
-access:
-  - Access to the balena team model
-  - Access to the 'operations@balena.io' email
-input:
-  - Team member details
-  - Google form
-output:
-  - Email to team member
-instructions: "1. Open the Front application and compose a new Email
-
-2. In the 'to:' field use the 'team member email'
-
-3. In the 'subject:' filed use 'Submit Google form'
-
-4. In the main body address the team member with their first name if you have it and add the google form link
-
-5. Send the email to the team member"
-
-```
-"
 ---
 handle: Process simplified yaml file
 type: input-output
-description: A yaml file that contains the process transformations
+description: "A yaml file that contains the process transformations
+
+```yaml
+
+handle: Abstract idea for a process
+
+type: input-output
+
+description: A well defined idea for how a process should be handled
+
+required:
+  - Process steps
+  - Process inputs and outputs
+  
+optional:
+
+```
+"
 required:
   - inputs
   - transformations
@@ -127,12 +54,18 @@ input:
 output:
   - Process diagram image
 instructions: "1. Using mermaid syntax, create a shape based on the element type: Skewed rectangle for an input-output, rectangle for a transformer
-2. Use the 'handle' as text for the each element
-3. Draw an arrow from every 'input-output' to every `transformer` that calls it as `input`
-4. Draw an arrow from every 'transformer' to every `input-output` that call as `output`
-5. When the diagram is finished export a PNG file
-6. Save the PNG file to the repo's output folder, name it as 'process-diagram.png'"
 
+2. Use the 'handle' as text for the each element
+
+3. Draw an arrow from every 'input-output' to every `transformer` that calls it as `input`
+
+4. Draw an arrow from every 'transformer' to every `input-output` that call as `output`
+
+5. When the diagram is finished export a PNG file
+
+  ![Image 1 appears here](img1.jpg)
+
+6. Save the PNG file to the repo's output folder, name it as 'process-diagram.png'"
 ---
 handle: Process diagram image
 type: input-output
