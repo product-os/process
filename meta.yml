@@ -5,7 +5,6 @@ required:
   - Process steps
   - Process inputs and outputs
 optional:
-images:
 ---
 handle: Convert process steps into transformers
 type: transformer
@@ -19,17 +18,28 @@ input:
 output:
   - Process simplified yaml file
 instructions:
-images:
 ---
 handle: Process simplified yaml file
 type: input-output
-description: A yaml file that contains the process transformations
+description: "A yaml file that contains the process transformations
+
+```yaml
+
+handle: Abstract idea for a process
+type: input-output
+description: A well defined idea for how a process should be handled
+required:
+  - Process steps
+  - Process inputs and outputs
+optional:
+
+```
+"
 required:
   - inputs
   - transformations
   - outputs
 optional:
-images:
 ---
 handle: Convert process to a diagram
 type: transformer
@@ -41,12 +51,18 @@ input:
 output:
   - Process diagram image
 instructions: "1. Using mermaid syntax, create a shape based on the element type: Skewed rectangle for an input-output, rectangle for a transformer
+
 2. Use the 'handle' as text for the each element
+
 3. Draw an arrow from every 'input-output' to every `transformer` that calls it as `input`
+
 4. Draw an arrow from every 'transformer' to every `input-output` that call as `output`
+
+  ![Image 1 appears here](../docs/images/img1.jpg)
+
 5. When the diagram is finished export a PNG file
+
 6. Save the PNG file to the repo's output folder, name it as 'process-diagram.png'"
-images:
 ---
 handle: Process diagram image
 type: input-output
@@ -54,7 +70,6 @@ description: An image of the process flow chart
 required:
   - PNG
 optional:
-images:
 ---
 handle: Convert simplified yaml to a markdown
 type: transformer
@@ -68,7 +83,6 @@ output:
 instructions: "1. Copy the yaml file
 2. Replace 'handle:' with '#'
 3. ..."
-images:
 ---
 handle: Process markdown file
 type: input-output
@@ -76,7 +90,6 @@ description: An image of the process flow chart
 required:
   - PNG
 optional:
-images:
 ---
 handle: Convert simplified yaml to transformer compliant yaml
 type: transformer
@@ -88,7 +101,6 @@ input:
 output:
   - Jellyfish instance
 instructions: "..."
-images:
 ---
 handle: Jellyfish instance
 type: input-output
@@ -96,4 +108,3 @@ description:
 required:
   -
 optional:
-image:
