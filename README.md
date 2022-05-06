@@ -27,6 +27,8 @@ release: github
 
 ```
 
+For now, we use contract-to-markdown instead of the CI to generate the markdown files and the mermaid diagram from the yaml file, then we push them manually. 
+
 ## Documentation
 
 TBC
