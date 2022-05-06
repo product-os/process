@@ -29,7 +29,7 @@ release: github
 
 ## Documentation
 
-See the [docs][./docs] folder.
+See the [docs](./docs) folder.
 
 ## Getting Help
 
