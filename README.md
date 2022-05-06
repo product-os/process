@@ -9,6 +9,7 @@
 - **Version control**: Use version control to track and communicate changes to the team
 - **Reviewing**: Get reviews from other team members
 - **Testing**: Make sure the process is working as expected before implementation
+- **test**: description
 
 ## Process diagram
 
