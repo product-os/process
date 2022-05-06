@@ -9,7 +9,7 @@
 - **Version control**: Use version control to track and communicate changes to the team
 - **Reviewing**: Get reviews from other team members
 - **Testing**: Make sure the process is working as expected before implementation
-- **test**: description
+- **Readability**: Auto generate a landr page so navigation through a process is easy an intuitive
 
 ## Process diagram
 
