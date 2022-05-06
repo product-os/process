@@ -1,32 +1,32 @@
 # Convert process steps into transformers
 
-## type
+### type
 
 
 transformer
 
-## description
+### description
 
 
 The process should be expressed with simple transformations
 
-## actor
+### actor
 
 
 Process owner
 
-## access
+### access
 
 
  - GitHub account
  - access to 'https://github.com/product-os'
 
-## input
+### input
 
 
  - Abstract idea for a process
 
-## output
+### output
 
 
  - Process simplified yaml file

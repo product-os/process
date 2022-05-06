@@ -1,31 +1,31 @@
 # Convert simplified yaml to transformer compliant yaml
 
-## type
+### type
 
 
 transformer
 
-## description
+### description
 
 
 Convert the yaml file into a yaml code that transformers understand
 
-## actor
+### actor
 
 
 GitHub CI
 
-## input
+### input
 
 
  - Process simplified yaml file
 
-## output
+### output
 
 
  - Jellyfish instance
 
-## instructions
+### instructions
 
 
 ...

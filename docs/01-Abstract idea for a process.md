@@ -1,16 +1,16 @@
 # Abstract idea for a process
 
-## type
+### type
 
 
 input-output
 
-## description
+### description
 
 
 A well defined idea for how a process should be handled
 
-## required
+### required
 
 
  - Process steps

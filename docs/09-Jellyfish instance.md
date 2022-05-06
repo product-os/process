@@ -1,6 +1,6 @@
 # Jellyfish instance
 
-## type
+### type
 
 
 input-output

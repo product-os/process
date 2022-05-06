@@ -1,31 +1,31 @@
 # Convert simplified yaml to a markdown
 
-## type
+### type
 
 
 transformer
 
-## description
+### description
 
 
 Convert the yaml file into a landr readable markdown file
 
-## actor
+### actor
 
 
 GitHub CI
 
-## input
+### input
 
 
  - Process simplified yaml file
 
-## output
+### output
 
 
  - Process markdown file
 
-## instructions
+### instructions
 
 
 1. Copy the yaml file 2. Replace 'handle:' with '#' 3. ...

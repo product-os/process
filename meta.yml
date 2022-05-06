@@ -26,11 +26,15 @@ description: "A yaml file that contains the process transformations
 ```yaml
 
 handle: Abstract idea for a process
+
 type: input-output
+
 description: A well defined idea for how a process should be handled
+
 required:
   - Process steps
   - Process inputs and outputs
+  
 optional:
 
 ```
@@ -58,7 +62,7 @@ instructions: "1. Using mermaid syntax, create a shape based on the element type
 
 4. Draw an arrow from every 'transformer' to every `input-output` that call as `output`
 
-  ![Image 1 appears here](../docs/images/img1.jpg)
+  ![Image 1 appears here](img1.jpg)
 
 5. When the diagram is finished export a PNG file
 
