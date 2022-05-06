@@ -13,9 +13,7 @@
 
 ## Process diagram
 
-Mermaid code generated from [meta.yml](./meta.yml) by using the `mermaid` command of our hack-week cli tool: https://github.com/balena-io-playground/contract-to-markdown, and rendered using mermaid.live.
-
-![Process diagram png](/home/alida/projects/product-os/process/docs/images/process.png)
+The file [process-diagram.md](./process-diagram.md) contains the mermaid diagram auto-generated from [meta.yml](./meta.yml) by using the `mermaid` command of our hack-week cli tool: https://github.com/balena-io-playground/contract-to-markdown.
 
 ## Setup and configuration
 
