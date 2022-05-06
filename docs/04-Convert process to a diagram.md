@@ -36,8 +36,8 @@ GitHub CI
 
 4. Draw an arrow from every 'transformer' to every `input-output` that call as `output`
 
-![Image 1 appears here](img1.jpg)
-
 5. When the diagram is finished export a PNG file
+
+![Image 1 appears here](img1.jpg)
 
 6. Save the PNG file to the repo's output folder, name it as 'process-diagram.png'
