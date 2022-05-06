@@ -40,7 +40,7 @@ description: A well defined idea for how a process should be handled
 required:
   - Process steps
   - Process inputs and outputs
-optionals:
+optional:
 images:
 ---
 handle: Convert process steps into transformers
@@ -64,7 +64,7 @@ required:
   - inputs
   - transformations
   - outputs
-optionals:
+optional:
 images:
 ---
 handle: Convert process to a diagram
@@ -89,7 +89,7 @@ type: input-output
 description: An image of the process flow chart
 required:
   - PNG
-optionals:
+optional:
 images:
 ---
 handle: Convert simplified yaml to a markdown
@@ -111,7 +111,7 @@ type: input-output
 description: An image of the process flow chart
 required:
   - PNG
-optionals:
+optional:
 images:
 ---
 handle: Convert simplified yaml to transformer compliant yaml
@@ -131,7 +131,7 @@ type: input-output
 description:
 required:
   -
-optionals:
+optional:
 images:
 
 ```
