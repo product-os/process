@@ -22,7 +22,7 @@ Each GitHub repo under Balena has a `repo.yml` file in the top level directory. 
 For process repos, we should always have the following contents in the `repo.yml` file
 
 ```yaml
-type: generic
+type: process
 release: github
 
 ```
@@ -34,8 +34,3 @@ See the [docs](./docs) folder.
 ## Getting Help
 
 If you're having any problem, please [raise an issue](https://https://github.com/product-os/process/issues/new) on GitHub and we will be happy to help.
-
-
-
-
-
