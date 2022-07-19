@@ -1,0 +1,11 @@
+name: "processor-action"
+
+description: "process markdown process files"
+
+outputs:
+  process-output:
+    description: Structured markdown with mermaid diagram, along with a Landr site
+
+runs:
+  using: "node16"
+  main: "index.js"
