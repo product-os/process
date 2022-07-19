@@ -1,5 +1,6 @@
 name: Process processor
-on: push
+on:
+  workflow_call
 
 # We need write permissions for the repo to append a mermaid diagram in the markdown file
 permissions:
@@ -7,4 +8,4 @@ permissions:
 
 jobs:
   processor:
-    uses: ./source/actions/process-processor@latest
+    uses: ./.github/actions/process-processor@latest
