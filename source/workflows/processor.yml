@@ -1,0 +1,10 @@
+name: Process processor
+on: push
+
+# We need write permissions for the repo to append a mermaid diagram in the markdown file
+permissions:
+  contents: write
+
+jobs:
+  processor:
+    uses: ./source/actions/process-processor
