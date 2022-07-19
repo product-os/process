@@ -7,4 +7,4 @@ permissions:
 
 jobs:
   processor:
-    uses: ./source/actions/process-processor
+    uses: ./source/actions/process-processor@latest
