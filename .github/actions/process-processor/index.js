@@ -5,6 +5,7 @@ import github from '@actions/github'
 import exec from '@actions/exec';
 import {unified} from 'unified'
 import remarkParse from 'remark-parse'
+import fs from 'fs'
 
 const yellow = (v) => `${style.yellow.open}${v}${style.yellow.close}`;
 const green = (v) => `${style.green.open}${v}${style.green.close}`;
@@ -53,8 +54,20 @@ async function run(){
     core.info(yellow(["Author    ", authorName].join("")))
 
     // core.info(JSON.stringify(github.context.payload, null, 2))
-    let lsOutput = await exec.getExecOutput('ls -lah docs/*.md');
-    core.info(lsOutput.stdout);
+    fs.readdir('docs/', (err, files) => {
+	if (err)
+	    console.log(err);
+	else {
+	    console.log("\Filenames with the .md extension:");
+	    files.forEach(file => {
+		if (path.extname(file) == ".md"){
+		    core.info(green(file));
+		    parseDocs(file)
+		}
+	    })
+	}
+    })
 }
+
 
 run();
