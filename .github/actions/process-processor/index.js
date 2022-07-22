@@ -6,6 +6,7 @@ import exec from '@actions/exec';
 import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import fs from 'fs'
+import path from 'path'
 
 const yellow = (v) => `${style.yellow.open}${v}${style.yellow.close}`;
 const green = (v) => `${style.green.open}${v}${style.green.close}`;
