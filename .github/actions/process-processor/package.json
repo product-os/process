@@ -1,4 +1,5 @@
 {
+    "type": "module",
   "name": "process-processor",
   "version": "1.0.0",
   "description": "",
