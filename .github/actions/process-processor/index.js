@@ -63,7 +63,7 @@ async function run(){
 	    files.forEach(file => {
 		if (path.extname(file) == ".md"){
 		    core.info(green(file));
-		    parseDocs(file)
+		    parseDocs('docs/'+file)
 		}
 	    })
 	}
