@@ -23,11 +23,9 @@ async function run(){
     core.info(JSON.stringify(github.context.payload, null, 2))
 
     toolpath = await io.which('ls', true)
-    exitCode = await exec.exec(
-        `"${toolpath}"`,
-        ['-l', '-a'],
-        _testExecOptions
-      )
+    core.info(toolpath);
+    output = await exec.getExecOutput('ls -lah');
+    core.info(output.stdout);
 }
 
 run();
