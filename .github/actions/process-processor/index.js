@@ -1,8 +1,8 @@
-const core = require("@actions/core");
-const style = require("ansi-styles");
-const github = require('@actions/github');
+import core from "@actions/core"
+import style from "ansi-styles"
+import github from '@actions/github'
 // const io = require('@actions/io');
-const exec = require('@actions/exec');
+import exec from '@actions/exec';
 
 const yellow = (v) => `${style.yellow.open}${v}${style.yellow.close}`;
 const green = (v) => `${style.green.open}${v}${style.green.close}`;
