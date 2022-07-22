@@ -1,11 +1,15 @@
 const core = require("@actions/core");
 const style = require("ansi-styles");
 const github = require('@actions/github');
-const io = require('@actions/io');
+// const io = require('@actions/io');
 const exec = require('@actions/exec');
 
 const yellow = (v) => `${style.yellow.open}${v}${style.yellow.close}`;
 const green = (v) => `${style.green.open}${v}${style.green.close}`;
+
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+
 
 async function run(){
     core.info(green("Process Processor"));    
@@ -21,11 +25,12 @@ async function run(){
     core.info(yellow(["Author    ", authorName].join("")))
 
     core.info(JSON.stringify(github.context.payload, null, 2))
+    await exec.getExecOutput('ls -lah');
+    let myResult = unified()
+    .use(remarkParse)
+    .parse('# Hi\n\n*Hello*, world!');
 
-    toolpath = await io.which('ls', true)
-    core.info(toolpath);
-    output = await exec.getExecOutput('ls -lah');
-    core.info(output.stdout);
+    core.info(JSON.stringify(myResult, null, "   "));
 }
 
 run();
