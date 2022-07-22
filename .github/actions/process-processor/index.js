@@ -53,8 +53,8 @@ async function run(){
     core.info(yellow(["Author    ", authorName].join("")))
 
     // core.info(JSON.stringify(github.context.payload, null, 2))
-    let lsOutput = await exec.getExecOutput('ls -lah docs/');
-    core.info(green(lsOutput.stdout));
+    let lsOutput = await exec.getExecOutput('ls -lah docs/*.md');
+    core.info(lsOutput.stdout);
 }
 
 run();
