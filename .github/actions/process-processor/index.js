@@ -77,11 +77,11 @@ async function parseDocs(filePath) {
 	case 'heading':
 	    // console.log(myResult.children[i].children[0].value)
 	    if (myResult.children[i].children[0].value === 'Title') {
-		fs.appendFileSync(filePath.split('.')[0]+'.yml',"name: "+myResult.children[i].children[0].value+'\n');
+		fs.appendFileSync(filePath.split('.')[0]+'.yml',"handle: "+myResult.children[i].children[0].value+'\n');
 		fs.appendFileSync(filePath.split('.')[0]+'.yml',"type: transformer"+'\n');
 	    }
 	    else if (myResult.children[i].children[0].value === 'Input' || myResult.children[i].children[0].value === 'Output') { // input output type
-		fs.appendFileSync(filePath.split('.')[0]+'.yml',"name: "+myResult.children[i].children[0].value+'\n');
+		fs.appendFileSync(filePath.split('.')[0]+'.yml',"handle: "+myResult.children[i].children[0].value+'\n');
 		fs.appendFileSync(filePath.split('.')[0]+'.yml',"type: input-output"+'\n');
 	    }
 	    break;
