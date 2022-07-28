@@ -14,31 +14,37 @@ const green = (v) => `${style.green.open}${v}${style.green.close}`;
 
 async function parseDocs(filePath) {
     const fileContents = fs.readFileSync(filePath).toString()
+    // fs.appendFileSync(filePath.split('.')[0]+'.yml', 'data to append');
 
     let myResult = unified()
 	.use(remarkParse)
 	.parse(fileContents);
-    
+    let myYAML = '';
     // console.log(JSON.stringify(myResult, null, 2))
     
     for (let i=0; i< myResult.children.length; i++){
 	
 	switch (myResult.children[i].type){
 	case 'heading':
-	    console.log(myResult.children[i].children[0].value)
+	    // console.log(myResult.children[i].children[0].value)
+	    fs.appendFileSync(filePath.split('.')[0]+'.yml',myResult.children[i].children[0].value);
 	    break;
 	case 'paragraph':
 	    // dont print the paragraph
 	    break;
 	case 'list':
 	    for (let j=0; j<myResult.children[i].children.length; j++){
-		console.log("  - ", myResult.children[i].children[j].children[0].children[0].value)
+		// console.log("  - ", myResult.children[i].children[j].children[0].children[0].value)
+		fs.appendFileSync(filePath.split('.')[0]+'.yml', "  - "+myResult.children[i].children[j].children[0].children[0].value);
 	    }
 	    break;
 	    
 	}
+	
     }
-
+    // print the contents of the yaml file
+    const yamlContents = fs.readFileSync(filePath.split('.')[0]+'.yml').toString()
+    core.info(yamlContents);
 }
 
 async function run(){
@@ -53,11 +59,13 @@ async function run(){
     core.info(yellow(["Org name  ", orgName].join("")))
     core.info(yellow(["Repo name ", repoName].join("")))
     core.info(yellow(["Author    ", authorName].join("")))
-
+    
     // core.info(JSON.stringify(github.context.payload, null, 2))
+
+    // Look for files only in the docs folder
     fs.readdir('docs/', (err, files) => {
 	if (err)
-	    console.log(err);
+	    core.setFailed("No docs folder found?",err);
 	else {
 	    console.log("\Filenames with the .md extension:");
 	    files.forEach(file => {
