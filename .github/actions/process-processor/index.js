@@ -7,9 +7,60 @@ import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import fs from 'fs'
 import path from 'path'
+import * as yaml from 'js-yaml'
 
 const yellow = (v) => `${style.yellow.open}${v}${style.yellow.close}`;
 const green = (v) => `${style.green.open}${v}${style.green.close}`;
+
+
+const generateMermaid = async (
+    params: { file: string },
+) => {
+    var ioindex = 0;
+    var ioarray = [];
+    var tindex = 0;
+    var tarray = [];
+    let mermaid = '```mermaid\n';
+    const elements: any[] = yaml.loadAll(fs.readFileSync(params.file, 'utf8'));
+    //    console.log('graph');
+    mermaid = mermaid.concat('graph\n');
+    for (const element of elements) {
+        if (element.type === 'transformer') {
+            tarray[tindex++] = element.handle;
+        }
+        else if (element.type === 'input-output') {
+
+            // console.log("IO" + ioindex.toString() + "[<b>" + element.handle + "</b>]");
+            mermaid = mermaid.concat("IO" + ioindex.toString() + "[/<b>" + element.handle + "</b>");
+
+            for (let req in element.required) {
+                // console.log("<br/>-", element.required[req]);
+                mermaid = mermaid.concat("<br/>-", element.required[req]);
+            }
+            for (let opt in element.optional) {
+                // console.log("<br/>- optional ", element.optional[opt]);
+                mermaid = mermaid.concat("<br/>- optional ", element.optional[opt]);
+            }
+            ioarray[ioindex++] = element.handle;
+            mermaid = mermaid.concat('/]\n');
+        }
+    }
+    for (const element of elements) {
+        if (element.type === 'transformer') {
+            // The next 2 lines mean that we can only use one input or output for each transformer
+            // if there are more than 1 mentioned, they will be ignored
+            var inputindex = ioarray.indexOf(element.input[0]);
+            var outputindex = ioarray.indexOf(element.output[0]);
+            var tindex = tarray.indexOf(element.handle);
+            // console.log('IO' + inputindex + ' --> T' + tindex + '{' + element.handle + '} --> IO' + outputindex);
+            mermaid = mermaid.concat('IO' + inputindex + ' --> T' + tindex + '[' + element.handle + '] --> IO' + outputindex)
+            mermaid = mermaid.concat('\n');
+        }
+    }
+    mermaid = mermaid.concat('\n```\n')
+    // fs.writeFileSync('process-diagram.md', mermaid, { encoding: 'utf8' })
+    console.log(mermaid);
+}
 
 
 async function parseDocs(filePath) {
@@ -27,7 +78,7 @@ async function parseDocs(filePath) {
 	switch (myResult.children[i].type){
 	case 'heading':
 	    // console.log(myResult.children[i].children[0].value)
-	    fs.appendFileSync(filePath.split('.')[0]+'.yml',myResult.children[i].children[0].value);
+	    fs.appendFileSync(filePath.split('.')[0]+'.yml',myResult.children[i].children[0].value+'\n');
 	    break;
 	case 'paragraph':
 	    // dont print the paragraph
@@ -35,7 +86,7 @@ async function parseDocs(filePath) {
 	case 'list':
 	    for (let j=0; j<myResult.children[i].children.length; j++){
 		// console.log("  - ", myResult.children[i].children[j].children[0].children[0].value)
-		fs.appendFileSync(filePath.split('.')[0]+'.yml', "  - "+myResult.children[i].children[j].children[0].children[0].value);
+		fs.appendFileSync(filePath.split('.')[0]+'.yml', "  - "+myResult.children[i].children[j].children[0].children[0].value+'\n');
 	    }
 	    break;
 	    
@@ -45,6 +96,7 @@ async function parseDocs(filePath) {
     // print the contents of the yaml file
     const yamlContents = fs.readFileSync(filePath.split('.')[0]+'.yml').toString()
     core.info(yamlContents);
+    generateMermaid(filePath.split('.')[0]+'.yml')
 }
 
 async function run(){
