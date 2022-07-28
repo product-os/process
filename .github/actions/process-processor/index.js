@@ -13,15 +13,13 @@ const yellow = (v) => `${style.yellow.open}${v}${style.yellow.close}`;
 const green = (v) => `${style.green.open}${v}${style.green.close}`;
 
 
-const generateMermaid = async (
-    params: { file: string },
-) => {
+async function generateMermaid(file){
     var ioindex = 0;
     var ioarray = [];
     var tindex = 0;
     var tarray = [];
     let mermaid = '```mermaid\n';
-    const elements: any[] = yaml.loadAll(fs.readFileSync(params.file, 'utf8'));
+    const elements: any[] = yaml.loadAll(fs.readFileSync(file, 'utf8'));
     //    console.log('graph');
     mermaid = mermaid.concat('graph\n');
     for (const element of elements) {
