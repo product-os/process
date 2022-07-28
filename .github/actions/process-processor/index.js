@@ -19,7 +19,7 @@ async function generateMermaid(file){
     var tindex = 0;
     var tarray = [];
     let mermaid = '```mermaid\n';
-    const elements: any[] = yaml.loadAll(fs.readFileSync(file, 'utf8'));
+    const elements = yaml.loadAll(fs.readFileSync(file, 'utf8'));
     //    console.log('graph');
     mermaid = mermaid.concat('graph\n');
     for (const element of elements) {
