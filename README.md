@@ -13,7 +13,7 @@
 
 ## Process diagram
 
-The file [process-diagram.md](./process-diagram.md) contains the mermaid diagram auto-generated from [meta.yml](./meta.yml) by using the `mermaid` command of our hack-week cli tool: https://github.com/balena-io-playground/contract-to-markdown.
+The file [process-diagram.md](.docs/process-diagram.md) contains the mermaid diagram auto-generated from [meta.yml](./meta.yml) by using the `mermaid` command of our hack-week cli tool: https://github.com/balena-io-playground/contract-to-markdown.
 
 ## Setup and configuration
 
@@ -29,7 +29,7 @@ release: github
 
 ## Documentation
 
-See the [docs](./docs) folder.
+See the [docs](.docs/) folder.
 
 ## Getting Help
 
