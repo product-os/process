@@ -1,7 +1,11 @@
 name: Process Processor
 
 on:
-  workflow_call:
+  pull_request:
+    types: [opened, synchronize, closed]
+    branches:
+      - "main"
+      - "master"
 
 # We need write permissions for the repo to append a mermaid diagram in the markdown file
 permissions:
