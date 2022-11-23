@@ -17,3 +17,10 @@ jobs:
       - uses: product-os/process/.github/actions/process-processor@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  flowzone:
+    name: Flowzone
+    uses: product-os/flowzone/.github/workflows/flowzone.yml@master
+    secrets: inherit
+    with:
+      # Disable branch protection updates whilst testing flowzone, remove before merging
+      cloudflare_website: "processes"
