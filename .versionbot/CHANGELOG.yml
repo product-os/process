@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove references to repo.yml
+      hash: 89d87046449671be69afa27724f2a80320d54adf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Anuj Deshpande
+      nested: []
+  version: 2.0.1
+  title: ""
+  date: 2023-01-27T12:03:24.345Z
+- commits:
     - subject: Remove github action
       hash: e62ff2e97c53f225c9a0bffe0d55f4863d63adcd
       body: ""
