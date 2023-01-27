@@ -14,19 +14,35 @@
 
 ## Setup and configuration
 
-Each GitHub repo under Balena has a `repo.yml` file in the top level directory. This tells the various CI (Continuous Integration) tools how to build and test the source code in the repository.
+Each GitHub repo under Balena has a `.github/workflows/flowzone.yml` file in the top level directory. This tells the various CI (Continuous Integration) tools how to build and test the source code in the repository.
 
-For process repos, we should always have the following contents in the `repo.yml` file
+For process repos, we should always have the following contents in the `flowzone.yml` file
 
 ```yaml
-type: process
-release: github
+name: Flowzone
 
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+    branches: [main, master]
+  # allow external contributions to use secrets within trusted code
+  pull_request_target:
+    types: [opened, synchronize, closed]
+    branches: [main, master]
+
+jobs:
+  flowzone:
+    name: Flowzone
+    uses: product-os/flowzone/.github/workflows/flowzone.yml@master
+    secrets: inherit
+	cloudflare_website: # to be filled in
 ```
+
+The `cloudflare_website` input field is to be filled in after asking ops to create a website for you.
 
 ## Documentation
 
-See the [docs](.docs/) folder.
+See the [site](https://processes.pages.dev) for more info
 
 ## Getting Help
 
