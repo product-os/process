@@ -11,9 +11,6 @@
 - **Testing**: Make sure the process is working as expected before implementation
 - **Readability**: Auto generate a landr page so navigation through a process is easy an intuitive
 
-## Process diagram
-
-The file [process-diagram.md](.docs/process-diagram.md) contains the mermaid diagram auto-generated from [meta.yml](./meta.yml) by using the `mermaid` command of our hack-week cli tool: https://github.com/balena-io-playground/contract-to-markdown.
 
 ## Setup and configuration
 
