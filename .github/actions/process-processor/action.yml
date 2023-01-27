@@ -1,7 +1,0 @@
-name: "processor-action"
-
-description: "process markdown process files"
-
-runs:
-  using: "node16"
-  main: "index.js"
