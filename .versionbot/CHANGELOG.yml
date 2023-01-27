@@ -1,0 +1,297 @@
+- commits:
+    - subject: Remove github action
+      hash: e62ff2e97c53f225c9a0bffe0d55f4863d63adcd
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+      author: Anuj Deshpande
+      nested: []
+    - subject: Rename process diagram file
+      hash: 733b6be0e7e1e217dc5e7f78de96a7cc412d7739
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Anuj Deshpande
+      nested: []
+    - subject: Move workflows from source folder to .github
+      hash: ad08dc15229bd6e1015c37be43c20f66fdfb1371
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Anuj Deshpande
+      nested: []
+    - subject: Add hello world action in nodejs
+      hash: 6fe37f515e2858d9887cf017d63ff836ec119cf5
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Anuj Deshpande
+      nested: []
+  version: 2.0.0
+  title: ""
+  date: 2023-01-27T09:29:54.819Z
+- version: 1.3.3
+  date: 2022-07-18T11:58:32Z
+  commits:
+    - hash: 3761e3edb864be4d33b3d476fa35e047e2200b8a
+      author: Anuj Deshpande
+      footers:
+        change-type: patch
+      subject: Remove type generic from readme
+      body: null
+- version: 1.3.2
+- date: 2022-05-06T14:33:52Z
+- commits:
+    - hash: 620d737a691372920ca0997058e5dfd8f4b16392
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: "README.md: Fix link to docs"
+- commits:
+    - body: null
+- version: 1.3.1
+- date: 2022-05-06T14:26:29Z
+- commits:
+    - hash: 3728f839f6f4047afa4c001372d1033504b9990f
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: Import process diagram via md file, rather than png
+- commits:
+    - body: null
+- version: 1.3.0
+- date: 2022-05-06T14:06:43Z
+- commits:
+    - hash: 3d4b8d371bfc5c49692841395bdf23735ea5ea53
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: Basic functionality for fair
+- commits:
+    - body: null
+- version: 1.2.0
+- date: 2022-05-06T13:17:50Z
+- commits:
+    - hash: 846ad7bbcff86d14381c4961414bb47d715ca77a
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: Add docs for test meta.yml generated with contract-to-markdown
+- commits:
+    - body: null
+- commits:
+    - hash: 554600b800679c0730bbcd6e177f5225e1f734a4
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: Retry image and yaml block rendering
+- commits:
+    - body: null
+- commits:
+    - hash: 01965fff68b9293ad93d1d2f5b2a8ce7b83e27fd
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: Add missing image
+- commits:
+    - body: null
+- commits:
+    - hash: 697144c16077ed697d66fb3b3b6fea75b8f43ffb
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: AlidaOdendaal <alida@balena.io>
+- commits:
+    - subject: Retry
+- commits:
+    - body: null
+- commits:
+    - hash: a10e0c8f1c5f3340a149d046c187d8011e484cff
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - subject: Merge branch 'master' into add-markdown-for-testing-meta
+- commits:
+    - body: null
+- commits:
+    - hash: c6c0fdb099d54591e85fc9e1c2af1ba00edfe635
+- commits:
+    - author: AlidaOdendaal
+- commits:
+    - subject: Merge branch 'master' into add-markdown-for-testing-meta
+- commits:
+    - body: null
+- version: 1.1.1
+- date: 2022-05-06T13:11:41Z
+- commits:
+    - hash: 26c4b20470fe411bb874e569eb76b9c62e24509d
+- commits:
+    - author: Konstantinos Mouzakis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: added a highlight
+- commits:
+    - body: null
+- commits:
+    - hash: 28d21f511c8a4ceffb4b0ea7dbd471e82affaab6
+- commits:
+    - author: Konstantinos Mouzakis
+- commits:
+    - subject: updated highlight
+- commits:
+    - body: null
+- version: 1.1.0
+- date: 2022-05-06T12:50:53Z
+- commits:
+    - hash: d8b86c5ab0fdb96744bc9e86f34f6bfd64b37f4c
+- commits:
+    - author: Konstantinos Mouzakis
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - subject: update readme
+- commits:
+    - body: null
+- commits:
+    - hash: f23cb71d7d910380f92ee965cdd0b1349d2edff4
+- commits:
+    - author: Konstantinos Mouzakis
+- commits:
+    - subject: diagram to yaml
+- commits:
+    - body: null
+- commits:
+    - hash: c5ca2d10b1463e9b834f1f60938455253943b44c
+- commits:
+    - author: konmouz
+- commits:
+    - subject: typo fix
+- commits:
+    - body: null
+- commits:
+    - hash: 0cc405fe05afd720251463879b48f803524f3387
+- commits:
+    - author: konmouz
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: populated the meta file
+- commits:
+    - body: null
+- commits:
+    - hash: c8aa8a09260be27ce7ae76ba4f045fa373a4adfd
+- commits:
+    - author: Konstantinos Mouzakis
+- commits:
+    - subject: Merge branch 'master' into hack-week
+- commits:
+    - body: null
+- version: 1.0.0
+- date: 2022-05-06T11:28:03Z
+- commits:
+    - hash: 27d0fc50ecbce4f0f81bee6e2a0cdbdf5c9564a7
+- commits:
+    - author: Anuj Deshpande
+- commits:
+    - footers:
+        change-type: major
+- commits:
+    - footers:
+        signed-off-by: Anuj Deshpande <anuj@balena.io>
+- commits:
+    - subject: Testing
+- commits:
+    - body: null
+- commits:
+    - hash: 197ef8343d79ae9ebab692ac78d692c21d1a8849
+- commits:
+    - author: Anuj Deshpande
+- commits:
+    - subject: Testing 2
+- commits:
+    - body: null
+- commits:
+    - hash: 3b0e6a49de6076284cf5ca13f6f280b924037032
+- commits:
+    - author: Anuj Deshpande
+- commits:
+    - subject: Testing 3
+- commits:
+    - body: null
+- version: 0.1.1
+- date: 2022-04-18T16:01:19Z
+- commits:
+    - hash: 89361f99157cad0549c1f9f5da37492e023d9019
+- commits:
+    - author: Somo
+- commits:
+    - footers:
+        change-type: patch
+- commits:
+    - footers:
+        signed-off-by: Somo S <somo@balena.io>
+- commits:
+    - subject: add link to actual process template repo
+- commits:
+    - body: Since this repo is not itself the template.
+- version: 0.1.0
+- date: 2022-04-15T14:24:16Z
+- commits:
+    - hash: 738532505de3f08267154d7f105fe21fe146c5da
+- commits:
+    - author: Konstantinos Mouzakis
+- commits:
+    - footers:
+        change-type: minor
+- commits:
+    - subject: added doc
+- commits:
+    - body: null
