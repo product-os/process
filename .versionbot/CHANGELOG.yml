@@ -1,4 +1,17 @@
 - commits:
+    - subject: Pin product-os/flowzone action to a53cf4b
+      hash: c1ee674d5149da73725e40cdac8d8c5ff132a476
+      body: |
+        Update product-os/flowzone
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: balena-renovate[bot]
+      nested: []
+  version: 2.0.2
+  title: ""
+  date: 2026-03-24T18:59:09.685Z
+- commits:
     - subject: Remove references to repo.yml
       hash: 89d87046449671be69afa27724f2a80320d54adf
       body: ""
