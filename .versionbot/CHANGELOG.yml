@@ -1,4 +1,16 @@
 - commits:
+    - subject: Revert flowzone pinning to master
+      hash: 5197bdb01c603d12ee5d18458e0fc34d22f6f7d3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 2.0.18
+  title: ""
+  date: 2026-03-26T17:27:00.932Z
+- commits:
     - subject: Update product-os/flowzone digest to 8ea01d3
       hash: 45f3bb4c5b98886ef5aff966ff4d6b5b8c152449
       body: |
